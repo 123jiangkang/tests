@@ -3,23 +3,23 @@
 cd xc-framework-parent
 mvn clean package
 
-if [ $COMMON == 'true' ];then
+if [ $COMMON ];then
     cd /var/lib/jenkins/workspace/xc_project/xc-framework-common
     mvn clean package
 fi
-if [ $MODEL == 'true' ];then
+if [ $MODEL ];then
     cd /var/lib/jenkins/workspace/xc_project/xc-framework-model
     mvn clean package
 fi
-if [ $UTILS == 'true' ];then
+if [ $UTILS];then
     cd /var/lib/jenkins/workspace/xc_project/xc-framework-utils
     mvn clean package
 fi
-if [ $API == 'true' ];then
+if [ $API ];then
     cd /var/lib/jenkins/workspace/xc_project/xc-service-api
     mvn clean package
 fi
-if [ $CMS == 'true' ];then
+if [ $CMS ];then
     cd /var/lib/jenkins/workspace/xc_project/xc-service-manage-cms
     mvn clean package
 fi
